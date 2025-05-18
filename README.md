@@ -56,19 +56,29 @@
 **ANÁLISIS POR PAÍS O REGIÓN** <br>
 
 - **¿Qué países tienen más películas en el dataset?** <br>
-  USA (7099), UK (1330), Francia (847), Italia (614), Alemania (518). <br>
+  USA (7099) <br> UK (1330) <br> Francia (847) <br> Italia (614) <br> Alemania (518) <br>
   
 - **Calcula el promedio de calificaciones por país.** <br>
-  
-- **¿Hay países que destacan por tener películas consistentemente bien valoradas?** <br>
+  Paises como Algeria, Bosnia, Uganda dominan el promedio de calificacion <br>
+  ![Promedio Por Pais](https://github.com/user-attachments/assets/313d6bb2-fcd9-4dc2-bf6a-b9f8a1cde909) <br> <br>
 
+- **¿Hay países que destacan por tener películas consistentemente bien valoradas?** <br>
+  En base a la desviacion estandar y al promedio podemos deducir que paises como Iran, Japan, Denmark, France, mantienen peliculas consistentes ya que tienen buen promedio de               calificacion, buena cantidad de peliculas y su variacion en base al promedio es baja, asi que no hay mucha diferencias entre las calificaciones de las peliculas de esos paises, lo que    quiere decir que sus calificaciones son buenas y que son consistentes. <br>
 
 **ANÁLISIS POR DÉCADA** <br>
 
 - **Número de películas por década.** <br>
+  1950s: 1257 <br> 1960s: 1286 <br> 1970s: 1295 <br> 1980s: 1290 <br> 1990s: 1329 <br> 2000s: 1267 <br> 2010s: 1335 <br> 2020s: 773 <br>
+  
 - **Promedio de calificación por década.** <br>
-- **¿hubo décadas “doradas”? ¿Algún descenso de calidad reciente?** <br>
+  1950s: 3.294926 <br> 1960s: 3.244363 <br> 1970s: 3.264374 <br> 1980s: 3.252622 <br> 1990s: 3.268501 <br> 2000s: 3.260200 <br> 2010s: 3.267962 <br> 2020s: 3.296531 <br>
+  
+- **¿hubo décadas “doradas”?** <br>
+  Si hubo decadas doradas, las decadas 70s y 2000s <br>
 
+- **¿Algún descenso de calidad reciente?** <br>
+  no, de hecho incremento un poco, aunque nada realmente considerable. <br>
+  
 **CONCLUSIÓN** <br>
 
 1. ¿Qué tipo de películas suelen gustar más según los datos?
