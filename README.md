@@ -17,26 +17,23 @@
 
 **VISUALIZACIONES CON INTERPRETACIÓN** <br>
 
-- **¿hay un rango típico de duración? ¿Hay muchas películas muy cortas o muy largas?** <br>
+- **¿Hay un rango típico de duración? ¿Hay muchas películas muy cortas o muy largas?** <br>
   Si hay un rango tipico: estan en 70 y 120 min aproximadamente la mayoria de las peliculas, <br>
-  No hay muchas peliculas muy cortas o muy largas, sin embargo, si existe un numero considerable de peliculas muy cortas <br>
+  No hay muchas peliculas muy cortas o muy largas, sin embargo, si existe un numero considerable de peliculas muy cortas. <br> <br>
   ![Histograma de duración ](https://github.com/user-attachments/assets/42149b86-0e3b-4254-affc-e712ce0293c1) <br> <br>
 
-  
-  
-  
-- **¿hay idiomas que suelen tener películas mejor calificadas?** <br>
-  si, paises como indonesian, Thai, Greek(modern) tienen mejores calificaciones <br>
+- **¿Hay idiomas que suelen tener películas mejor calificadas?** <br>
+  si, paises como indonesian, Thai, Greek(modern) tienen mejores calificaciones <br> <br>
 ![Boxplot de calificación promedio por idioma original](https://github.com/user-attachments/assets/92eecc1a-b4c7-406e-b3d5-512467ffdc5f) <br> <br>
   
   
-- **Cuenta cuántas veces aparece cada género.** <br>
+- **Cuenta cuántas veces aparece cada género.** <br> <br>
   ![Gráfico de barras de géneros más comunes](https://github.com/user-attachments/assets/5a032008-d0f5-4485-9ff5-34bfe3059ec4) <br> <br>
 
-- **¿las películas más largas reciben mejores calificaciones?** <br>
+- **¿Las películas más largas reciben mejores calificaciones?** <br>
   No precisamente, la gran mayoria de las peliculas se encuentra en un rango de 0-200 minutos con una variabilidad considerable en sus calificaciones promedio.<br>
   Hay muy pocas peliculas con gran duracion mayor a 200 o 300, pero sus calificaciones no parecer ser mas altas que el resto de peliculas,
-  asi que no, no hay una tendencia clara que a mayor duracion mejor calificacion prometio tendran. <br>
+  asi que no, no hay una tendencia clara que a mayor duracion mejor calificacion prometio tendran. <br> <br>
   ![Scatterplot de duración vs calificación promedio ](https://github.com/user-attachments/assets/6f7f9ec1-187e-43f2-ae4b-a01e9af151d1) <br> <br>
 
 
@@ -51,7 +48,7 @@
   No se encontro ninguna polarizante. <br>
   
 - **¿Qué géneros aparecen más entre las películas con muchos votos?** <br>
-  Dramas, Comedia, Crimen, Aventura, Thriller, Ciencia Ficcion entre los mas votados<br>
+  Drama, Comedia, Crimen, Aventura, Thriller, Ciencia Ficcion entre los mas votados<br>
 
 **ANÁLISIS POR PAÍS O REGIÓN** <br>
 
@@ -73,16 +70,32 @@
 - **Promedio de calificación por década.** <br>
   1950s: 3.294926 <br> 1960s: 3.244363 <br> 1970s: 3.264374 <br> 1980s: 3.252622 <br> 1990s: 3.268501 <br> 2000s: 3.260200 <br> 2010s: 3.267962 <br> 2020s: 3.296531 <br>
   
-- **¿hubo décadas “doradas”?** <br>
-  Si hubo decadas doradas, las decadas 70s y 2000s <br>
+- **¿Hubo décadas “doradas”?** <br>
+  Si hubo decadas doradas, las decadas los 70s y 2000s <br>
 
 - **¿Algún descenso de calidad reciente?** <br>
   no, de hecho incremento un poco, aunque nada realmente considerable. <br>
   
 **CONCLUSIÓN** <br>
 
-1. ¿Qué tipo de películas suelen gustar más según los datos?
-2. ¿Qué géneros o países tienen la mejor recepción crítica?
-3. ¿Hay relación entre duración y calificación?
-4. ¿Cuáles son las películas más polarizantes del dataset?
-5. ¿Qué aprendiste sobre el gusto del público?
+1. ¿Qué tipo de películas suelen gustar más según los datos? <br>
+Las peliculas con genero de drama, Comedia y Crimen. <br> <br>
+
+2. ¿Qué géneros o países tienen la mejor recepción crítica? <br>
+  Los paises Algeria, Bosnia, Uganda junto con los generos Drama, Crimen y comedia mantienen la mejor recepcion critica. <br>
+
+3. ¿Hay relación entre duración y calificación? <br>
+  no, no hay una tendencia clara que a mayor duracion mejor calificacion prometio tendran las peliculas. <br>
+   
+4. ¿Cuáles son las películas más polarizantes del dataset? <br>
+  No, hay peliculas polarizantes, puede que algunas peliculas tendran un promedio de calificacion de 30 o mas en 5 estrellas pero no mantienen un promedio alto en 1 estrella, lo que        indica que no hay peliculas polarizantes. <br>
+
+5. ¿Qué aprendiste sobre el gusto del público? <br>
+  El publico prefiere películas de duración entre 70 y 140 min alrededor, con los géneros de Drama, Comedia y Accion, la mayoría del publico fue mas fan de las películas en la década de    los 2010s. <br> <br>
+
+Países menos convencionales como Argelia, Bosnia o Uganda obtuvieron calificaciones muy altas, esto indica que, aunque producen menos películas logran mejor audiencia internacional y suelen tener mejor calidad o propuestas muy valoradas por el público. <br> <br>
+Géneros normalmente populares como acción, aventura o ciencia ficción no se posicionan entre los de mayor calificación promedio, esto no es necesariamente falta de aceptación, sino mas bien se debe a que su percepción es porque tiende a ser más variable o moderada. <br> <br>
+Un dato interesante del análisis por país es que algunas naciones con menor presencia a nivel global como Argelia, Bosnia, Uganda y Latvia obtuvieron promedios de calificaciones altos, esto podría deberse a que las pocas películas de estos países que logran alcanzar un reconocimiento internacional suelen destacarse por su calidad cinematográfica, su valor cultural o lo original de su producción. <br> <br>
+Por otro lado, países con grandes industrias cinematográficas como Estados unidos, Reino Unido o Francia no aparecen en los primeros lugares de promedio de calificación, esto podría deberse a que tienen un mayor volumen de producción y diversidad en la temática de las películas, lo que podría generar que su media de calificación sea tan amplia y menos concentrada en calificación con un nivel alto. <br> <br>
+En conclusión, el conjunto de datos revela que el publico tienden a valorar con mayor entusiasmó las películas con una experiencia significativa, además evidencia que la calidad y valor cultural de una obra puede sobresalir incluso en industrias cinematográficas pequeñas.
+
