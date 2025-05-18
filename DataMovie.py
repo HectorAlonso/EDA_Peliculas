@@ -151,3 +151,32 @@ plt.xlabel('Duracion en Minutos')
 plt.ylabel('Promedio Calificacion')
 plt.grid(color='green', linestyle='--', alpha=0.3)
 plt.show()
+
+# ! 4- Análisis por popularidad ------------------------------------------
+
+# ? ¿Cuáles son las películas con más ratings? ¿Coinciden con las mejor calificadas?
+
+peliculasConMasRating = data.sort_values(by="Total_ratings", ascending=False)
+print(peliculasConMasRating[["Film_title","Total_ratings"]].head(10))
+
+peliculasConMasCalificacion = data.sort_values(by="Average_rating", ascending=False)
+print(peliculasConMasCalificacion[["Film_title","Average_rating"]].head(10))
+
+# ? Calcula el porcentaje de usuarios que dieron 5 estrellas vs 1 estrella para detectar películas polarizantes.
+
+data["1Estrella"] = round((data["★"] / data["Total_ratings"]) * 100,2) 
+data["5Estrellas"] = round((data["★★★★★"] / data["Total_ratings"]) * 100,2)
+
+peliculasPolarizantes = data[(data["1Estrella"] > 30) & (data["5Estrellas"] > 30)]
+print(peliculasPolarizantes[["Film_title","1Estrella","5Estrellas"]])
+
+
+# ? ¿Qué géneros aparecen más entre las películas con muchos votos? ----------------
+
+pelis_con_mas_votos = data.sort_values(by="Total_ratings", ascending=False).head(15)
+print(pelis_con_mas_votos[["Film_title","Genres","Total_ratings"]])
+
+Generos_Mas_Frecuntes = Counter([genero for sublist in pelis_con_mas_votos["Genres"] for genero in sublist])
+
+for genero, cantidad in Generos_Mas_Frecuntes.items():
+    print(f"{genero}: {cantidad}")
