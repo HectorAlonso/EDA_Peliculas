@@ -80,7 +80,7 @@
 **CONCLUSIÓN** <br>
 
 1. ¿Qué tipo de películas suelen gustar más según los datos? <br>
-Las películas con genero de drama, Comedia y Crimen. <br> <br>
+Las películas con genero de drama, Comedia y Crimen. <br> 
 
 2. ¿Qué géneros o países tienen la mejor recepción crítica? <br>
   Los países Algeria, Bosnia, Uganda junto con los géneros Drama, Crimen y comedia mantienen la mejor recepción critica. <br>
