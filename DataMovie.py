@@ -96,3 +96,58 @@ print(f"La pelicula con la calificacion mas Alta es: ")
 print(pelicula_Calif_Mas_Alta[["Film_title","Average_rating"]])
 print(f"\nLa pelicula con la calificacion mas Baja es: ")
 print(pelicula_Calif_Mas_Baja[["Film_title","Average_rating"]])
+
+# ! 3- Visualizaciones con interpretación ----------------------------------
+
+# ? a) Histograma de duración 
+
+sns.histplot(data=data["Runtime"])
+plt.xlabel("Duracion en Minutos")
+plt.ylabel("Cantidad de peliculas")
+plt.show()
+
+# ? Boxplot de calificación promedio por idioma original -------------------
+
+data["Original_language"].fillna("Desconocido",inplace=True)
+
+plt.figure(figsize=(28,8))
+sns.boxplot(x='Original_language', y='Average_rating', data=data)
+plt.grid( color='green', linestyle='--', alpha=0.5)
+plt.title('Distribucion de calificacion promedio por idioma')
+plt.xticks(rotation=80)
+plt.show()
+
+# ? Gráfico de barras de géneros más comunes ------------------------------
+
+Cantidad_Por_Genero = Counter([genero for sublist in data["Genres"] for genero in sublist])
+
+generos = pd.Series(Cantidad_Por_Genero)
+generosMasComunes = generos[generos.values >= 200]
+
+generosMasComunes.plot(kind='bar', figsize=(14,10))
+
+for i, valor in enumerate(generosMasComunes):
+    plt.text(i, valor + 1, str(valor), ha='center')
+
+plt.title('Géneros más comunes')
+plt.xlabel('Generos')
+plt.ylabel('Número de Ocurrencias')
+plt.grid(axis='y', color='gray', linestyle='--', alpha=0.5)
+plt.tight_layout()
+plt.xticks(rotation=80) 
+plt.show()
+
+# ? Scatterplot: duración vs calificación promedio ------------------------
+
+data["Average_rating"].fillna(round(data["Average_rating"].mean(),2), inplace=True)
+
+x=data['Runtime']
+y=data['Average_rating']
+
+plt.scatter(x,y)
+
+plt.title('Relacion entre Calificacion Promedio y Duracion de peliculas')
+plt.xlabel('Duracion en Minutos')
+plt.ylabel('Promedio Calificacion')
+plt.grid(color='green', linestyle='--', alpha=0.3)
+plt.show()
