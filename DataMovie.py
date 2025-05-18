@@ -180,3 +180,37 @@ Generos_Mas_Frecuntes = Counter([genero for sublist in pelis_con_mas_votos["Genr
 
 for genero, cantidad in Generos_Mas_Frecuntes.items():
     print(f"{genero}: {cantidad}")
+
+# ! 5- Análisis por país o región -----------------------------------------
+
+# ? ¿Qué países tienen más películas en el dataset? ----------------------------
+
+Cantidad_Por_Pais = Counter([pais for sublist in data["Countries"] for pais in sublist])
+
+dtPaises = pd.DataFrame(list(Cantidad_Por_Pais.items()), columns=["Pais","Cantidad de Peliculas"])
+
+paises_con_mas_peliculas = dtPaises.sort_values(by="Cantidad de Peliculas",ascending=False)
+print(paises_con_mas_peliculas)
+
+# ? Calcula el promedio de calificaciones por país. ----------------------------
+
+data_exploded = data.explode('Countries')
+
+promedio_por_pais = data_exploded.groupby("Countries")["Average_rating"].mean().sort_values(ascending=False)
+print(promedio_por_pais)
+
+# ? ¿Hay países que destacan por tener películas consistentemente bien valoradas?
+
+data_explod = data.explode("Countries")
+
+resumen_por_pais = data_explod.groupby("Countries").agg(
+    Promedio=("Average_rating","mean"),
+    Cantidad_Peliculas=("Average_rating","count"),
+    Desviacion=("Average_rating","std")
+).reset_index()
+
+resumen_Filtrado = resumen_por_pais[resumen_por_pais["Cantidad_Peliculas"] > 10 ]
+
+resumen_ordenado = resumen_Filtrado.sort_values(by="Promedio",ascending=False)
+
+print(resumen_ordenado)
