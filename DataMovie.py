@@ -214,3 +214,33 @@ resumen_Filtrado = resumen_por_pais[resumen_por_pais["Cantidad_Peliculas"] > 10 
 resumen_ordenado = resumen_Filtrado.sort_values(by="Promedio",ascending=False)
 
 print(resumen_ordenado)
+
+# ! 6- Análisis por década -------------------------------------------------
+
+# ? Agrupa las películas por década. ---------------------------------------
+
+data["Release_year"] = np.random.randint(1950,2026,size=len(data))
+
+bins = [1950,1960,1970,1980,1990,2000,2010,2020,2030]
+labels = ['1950s','1960s','1970s','1980s','1990s','2000s','2010s','2020s']
+data['Decadas'] = pd.cut(data['Release_year'], bins=bins, labels=labels, right=False)
+
+# ? Número de películas por década. -----------------------------------------
+
+Peliculas_Decada = data["Decadas"].value_counts().sort_values(ascending=False)
+print(Peliculas_Decada)
+
+# ? Promedio de calificación por década. -------------------------------------
+
+promedio_por_decadas = data.groupby("Decadas")["Average_rating"].mean()
+print(promedio_por_decadas)
+
+# ? ¿Algún descenso de calidad reciente?
+
+promedio_por_decadas.plot(x="Decadas",y="Average_rating", marker="o", color="#00ff00")
+
+plt.title("Promedio de Calificacion por Decada")
+plt.xlabel("Decadas")
+plt.ylabel("Promedio de Calificacion")
+plt.grid(axis="y",color='green', linestyle='--', alpha=0.3)
+plt.show()
