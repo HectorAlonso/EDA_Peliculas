@@ -244,3 +244,8 @@ plt.xlabel("Decadas")
 plt.ylabel("Promedio de Calificacion")
 plt.grid(axis="y",color='green', linestyle='--', alpha=0.3)
 plt.show()
+
+
+# ! Exportacion de documentos con los cambios generados
+
+data.to_csv("DataSetMoviesNuevo.csv", index=False)
